@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #container {
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+    <title>Kalkulator Oszczędności CO2</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Kalkulator Oszczędności CO2</h2>
+        <label for="inputMieszkancy">Liczba mieszkańców:</label>
+        <input type="number" id="inputMieszkancy" min="1" placeholder="Podaj liczbę mieszkańców">
+
+        <button onclick="obliczCO2()">Oblicz</button>
+
+        <div id="wynik"></div>
+    </div>
+
+    <script>
+        function obliczCO2() {
+            var liczbaMieszkancow = document.getElementById("inputMieszkancy").value;
+
+            if (liczbaMieszkancow === "" || liczbaMieszkancow <= 0) {
+                alert("Proszę podać prawidłową liczbę mieszkańców.");
+                return;
+            }
+
+            var watyOszczedzoneNaOsobe = 100 - 5;
+            var calkowiteWatyzOszczedzone = liczbaMieszkancow * watyOszczedzoneNaOsobe;
+
+            
+            var wspolczynnikEmisjiCO2 = 0.4;
+
+            var CO2Oszczedzone = (calkowiteWatyzOszczedzone * 24 * 365 * wspolczynnikEmisjiCO2) / 1000;
+
+            var wynikElement = document.getElementById("wynik");
+            wynikElement.innerHTML = "Oszczędność CO2: " + CO2Oszczedzone.toFixed(2) + " kg CO2 na rok.";
+        }
+    </script>
+</body>
+</html>

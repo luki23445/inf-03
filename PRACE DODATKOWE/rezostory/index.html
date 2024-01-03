@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Rezystorów</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Kalkulator Rezystorów</h2>
+
+  <label for="config">Konfiguracja:</label>
+  <select id="config">
+    <option value="series">Szeregowo</option>
+    <option value="parallel">Równolegle</option>
+  </select>
+
+  <label for="value">Wartość rezystora (Ohm):</label>
+  <input type="number" id="value" placeholder="Podaj wartość rezystora">
+
+  <label for="quantity">Ilość rezystorów:</label>
+  <input type="number" id="quantity" placeholder="Podaj ilość rezystorów">
+
+  <button onclick="obliczEkwiwalent()">Oblicz</button>
+
+  <h3>Wartość ekwiwalentna rezystorów:</h3>
+  <p id="wynik">-</p>
+
+  <script>
+    function obliczEkwiwalent() {
+      const konfiguracja = document.getElementById("config").value;
+      const wartosc = parseFloat(document.getElementById("value").value);
+      const ilosc = parseInt(document.getElementById("quantity").value);
+
+      if (isNaN(wartosc) || isNaN(ilosc) || ilosc < 1) {
+        alert("Proszę wprowadzić poprawne wartości.");
+        return;
+      }
+
+      let wartoscEkwiwalentna;
+
+      if (konfiguracja === "series") {
+        wartoscEkwiwalentna = wartosc * ilosc;
+      } else {
+        wartoscEkwiwalentna = wartosc / ilosc;
+      }
+
+      document.getElementById("wynik").textContent = wartoscEkwiwalentna + " Ohm";
+    }
+  </script>
+
+</body>
+</html>

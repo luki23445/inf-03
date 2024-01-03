@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #wynik {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <title>Obliczanie pola trójkąta</title>
+</head>
+<body>
+    <h2>Obliczanie pola trójkąta</h2>
+
+    <label for="opcja">Wybierz sposób obliczeń:</label>
+    <select id="opcja">
+        <option value="podstawaWysokosc">Podstawa i wysokość</option>
+        <option value="trzyBoki">Trzy boki</option>
+    </select>
+
+    <div id="podstawaWysokoscInputs">
+        <label for="podstawa">Podstawa:</label>
+        <input type="number" id="podstawa" placeholder="Podstawa">
+
+        <label for="wysokosc">Wysokość:</label>
+        <input type="number" id="wysokosc" placeholder="Wysokość">
+    </div>
+
+    <div id="trzyBokiInputs">
+        <label for="bokA">Bok A:</label>
+        <input type="number" id="bokA" placeholder="Bok A">
+
+        <label for="bokB">Bok B:</label>
+        <input type="number" id="bokB" placeholder="Bok B">
+
+        <label for="bokC">Bok C:</label>
+        <input type="number" id="bokC" placeholder="Bok C">
+    </div>
+
+    <button onclick="obliczPole()">Oblicz pole</button>
+
+    <div id="wynik"></div>
+
+    <script>
+        function obliczPole() {
+            const opcja = document.getElementById('opcja').value;
+            const wynikElement = document.getElementById('wynik');
+            let pole;
+
+            if (opcja === 'podstawaWysokosc') {
+                const podstawa = parseFloat(document.getElementById('podstawa').value);
+                const wysokosc = parseFloat(document.getElementById('wysokosc').value);
+                pole = 0.5 * podstawa * wysokosc;
+            } else if (opcja === 'trzyBoki') {
+                const bokA = parseFloat(document.getElementById('bokA').value);
+                const bokB = parseFloat(document.getElementById('bokB').value);
+                const bokC = parseFloat(document.getElementById('bokC').value);
+                const s = (bokA + bokB + bokC) / 2;
+                pole = Math.sqrt(s * (s - bokA) * (s - bokB) * (s - bokC));
+            }
+
+            if (!isNaN(pole)) {
+                wynikElement.innerText = `Pole trójkąta wynosi: ${pole.toFixed(2)}`;
+            } else {
+                wynikElement.innerText = 'Wprowadź poprawne dane.';
+            }
+        }
+
+        
+        document.getElementById('opcja').addEventListener('change', function() {
+            const podstawaWysokoscInputs = document.getElementById('podstawaWysokoscInputs');
+            const trzyBokiInputs = document.getElementById('trzyBokiInputs');
+
+            if (this.value === 'podstawaWysokosc') {
+                podstawaWysokoscInputs.style.display = 'block';
+                trzyBokiInputs.style.display = 'none';
+            } else if (this.value === 'trzyBoki') {
+                podstawaWysokoscInputs.style.display = 'none';
+                trzyBokiInputs.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
