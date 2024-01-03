@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#baner {
+  background: #4E885C;
+  color: orange;
+  text-align: center;
+  height: 110px;
+}
+
+#baner h2 {
+  margin: 0;
+}
+
+#lewy {
+  background: #72A37D;
+  width: 30%;
+  height: 300px;
+  float: left;
+}
+
+#srodkowy {
+  background: #A2C3A9 url("pizza.png");
+  width: 40%;
+  height: 300px;
+  float: left;
+}
+
+#prawy {
+  background: #72A37D;
+  text-align: center;
+  width: 30%;
+  height: 300px;
+  float: left;
+  list-style-position: inside;
+}
+
+#dolny {
+  background: #A2C3A9;
+  text-align: center;
+  height: 250px;
+  clear: both;
+}
+
+#stopka {
+  background: #4E885C;
+  color: orange;
+}
+
+#stopka p {
+  margin: 0;
+}
+
+#prawy p a {
+  background: orange;
+  color: green;
+  padding: 15px;
+}

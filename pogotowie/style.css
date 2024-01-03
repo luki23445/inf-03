@@ -1,0 +1,48 @@
+body {
+	box-sizing: border-box;
+	background: #99FFCC;
+	margin: 0;
+	padding: 0;
+}
+#kontener {
+	width: 1000px;
+	margin: auto;
+}
+#baner {
+	background: #99FF66;
+	height: 200px;
+}
+#menu {
+	background: #66CCFF;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#glowny1, #glowny2, #glowny3 {
+	width: 310px;
+	padding: 10px;
+	float: left;
+}
+#stopka {
+	background: #66CCFF;
+	color: #006666;
+	text-align: right;
+	height: 30px;
+	padding: 20px;
+	clear: both;
+}
+#menu a {
+	color: #006666;
+	margin: 50px;
+	font-size: 200%;
+	text-decoration: none;
+}
+h2, h3 {
+	text-align: center;
+}
+button[type=reset] {
+	background: #FF0000;
+}
+button[type=button] {
+	background: #00FF00;
+}

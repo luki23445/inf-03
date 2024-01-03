@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pogotowie komputerowe</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" href="favicon.png" />
+</head>
+<body>
+	<div id="kontener">
+		<div id="baner">
+			<img src="animacja.gif" />
+		</div>
+		<div id="menu">
+			<a href="index.html">O nas</a>
+			<a href="kontakt.html">Kontakt</a>
+		</div>
+		<div id="glowny1"></div>
+		<div id="glowny2">
+			<h3>Formularz kontaktowy</h3>
+			<form>
+				<table>
+					<tr>
+						<td>Imię:</td>
+						<td><input type="text" id="imie" /></td>
+					</tr>
+					<tr>
+						<td>Nazwisko:</td>
+						<td><input type="text" id="nazwisko" /></td>
+					</tr>
+					<tr>
+						<td>E-mail:</td>
+						<td><input type="text" id="email" /></td>
+					</tr>
+					<tr>
+						<td>Usługa:</td>
+						<td>
+							<select id="lista">
+								<option value="naprawa komputera">naprawa komputera</option>
+								<option value="odzyskiwanie danych">odzyskiwanie danych</option>
+								<option value="problemy z oprogramowaniem">problemy z oprogramowaniem</option>
+								<option value="konfiguracja sieci LAN">konfiguracja sieci LAN</option>
+								<option value="inne">inne</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="checkbox" id="check" checked />Wyślij kopię wiadomości</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="reset">Resetuj</button><button type="button" onclick="formularz();">Prześlij</button></td>
+					</tr>
+				</table>
+			</form>
+			<p id="wynik">
+		</div>
+		<div id="glowny3"></div>
+		<div id="stopka">
+			<p>Autor strony: <b>PESEL</b></p>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
