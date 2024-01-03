@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#baner {
+  background: #1C59A7;
+  color: white;
+  text-align: center;
+  height: 80px;
+}
+
+#lewy {
+  background: #3A70B5;
+  width: 33%;
+  height: 200px;
+  float: left;
+}
+
+#srodek {
+  background: #5A8AC8;
+  width: 33%;
+  height: 200px;
+  float: left;
+}
+
+#prawy {
+  background: #86ACDD;
+  text-align: center;
+  width: 34%;
+  height: 200px;
+  float: left;
+}
+
+#dolny {
+  background: #86ACDD;
+  text-align: center;
+  height: 300px;
+  clear: both;
+}
+
+#stopka {
+  background: #1C59A7;
+  color: white;
+}
+
+#prawy p a {
+  background: yellow;
+  color: blue;
+  padding: 10px;
+}
+
+#baner h1 {
+  margin: 0;
+}
+
+#stopka p {
+  margin: 0;
+}
