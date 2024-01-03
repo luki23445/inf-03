@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>malarz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+    <main>
+        <section id="panelLewy">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="mieszamy.html">Mieszamy</a></li>
+                <li><a href="cena.html">Wyceniamy</a></li>
+            </ul>
+        </section>
+        <section id="panelSrodkowy">
+            <h2>Zapotrzebowanie na farbę</h2>
+            <label>Powierzchnia malowania (m<sup>2</sup>):
+                <input type="number" id="powierzchnia" />
+            </label>
+            <button type="button" onclick="policzFarba()">Policz</button>
+            <p id="wynik"></p>
+        </section>
+        <section id="panelPrawy">
+            <img src="obraz.png" alt="Próbki farb" />
+        </section>
+    </main>
+    <footer>
+        <h3>MALARZ</h3>
+        <p>
+            Stronę internetową opracował: <b>PESEL</b>
+          </p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

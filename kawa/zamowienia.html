@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hurtownia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="logo">
+    <img src="logo.png" alt="hurtownia" />
+  </div>
+  <div id="menu">
+    <a href="index.html">Strona główna</a>
+    <a href="zamowienia.html">Zamówienia</a>
+    <a href="blog.html">Blog o kawie</a>
+    <a href="http://gatunki-kawy.pl/">Odwiedź także</a>
+  </div>
+  <div id="baner">
+    <h1>Hurtownia kawy</h1>
+  </div>
+  <div id="lewy">
+    <h2>Oferta</h2>
+    <ol>
+      <li>Kawa palona Arabica</li>
+      <li>Kawa palona Robusta</li>
+      <li>Kawa bezkofeinowa</li>
+      <li>Kawa zielona</li>
+    </ol>
+  </div>
+  <div id="prawy">
+    Podaj numer kawy:<br />
+    <input type="number" id="numer" /><br />
+    Podaj wagę w dekagramach:<br />
+    <input type="number" id="waga" /><br />
+    <button type="button" onclick="zamow();">Zamów</button>
+    <p id="wynik"></p>
+  </div>
+  <div id="stopka">
+    Stronę przygotował: <b>PESEL</b>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
