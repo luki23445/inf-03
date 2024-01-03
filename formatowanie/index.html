@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatowanie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="baner">
+    <h1>Formatowanie dokumentów HTML</h1>
+  </div>
+  <div id="lewy">
+    <h2>Przykład listy - hobby</h2>
+    <ul>
+      <li>muzyka</li>
+      <li>turystyka
+        <ol>
+          <li>góry</li>
+          <li>jeziora</li>
+          <li>na rowerze</li>
+        </ol>
+      </li>
+      <li>książki</li>
+    </ul>
+  </div>
+  <div id="srodkowy">
+    <h2>Przykład tabeli - rozkład dnia</h2>
+    <table>
+      <tr>
+        <th>Pora dnia</th>
+        <th>Obowiązki</th>
+      </tr>
+      <tr>
+        <td>rano</td>
+        <td>nauka</td>
+      </tr>
+      <tr>
+        <td>południe</td>
+        <td>zajęcia dodatkowe</td>
+      </tr>
+      <tr>
+        <td>popołudnie</td>
+        <td rowspan="2">moje hobby</td>
+      </tr>
+      <tr>
+        <td>wieczór</td>
+      </tr>
+    </table>
+  </div>
+  <div id="prawy">
+    <img src="napisy.png" alt="technologia web" />
+  </div>
+  <div id="glowny">
+    <p>
+      Poznaj rozmiar tekstu w procentach:
+    </p>
+    <input type="number" id="procent" />%
+    <p>
+      <select id="styl">
+        <option value="normal">prosty</option>
+        <option value="italic">kursywa</option>
+      </select>
+    </p>
+    <p>
+      Jakim kolorem sformatować tekst? Wybierz przycisk
+    </p>
+    <button type="button" id="r" onclick="wynik('red')"></button>
+    <button type="button" id="g" onclick="wynik('green')"></button>
+    <button type="button" id="b" onclick="wynik('blue')"></button>
+    <p id="wynik">
+      To jest przykład paragrafu, który może być dowolnie formatowany przez JavaScript
+    </p>
+  </div>
+  <div id="stopka">
+    <p>
+      Formatowaniem tekstu zajmował się: <i>PESEL</i>
+    </p>
+    <a href="http://formatowanie.pl" target="_blank">Odwiedź także</a>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

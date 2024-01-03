@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+}
+
+#baner {
+  background: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#lewy,
+#srodkowy {
+  background: #A26475;
+  color: white;
+  width: 30%;
+  height: 300px;
+  float: left;
+}
+
+#prawy {
+  background: #A26475;
+  color: white;
+  width: 40%;
+  height: 300px;
+  text-align: right;
+  float: left;
+}
+
+#glowny {
+  background: #F0EAE2;
+  padding: 50px;
+  clear: both;
+}
+
+#stopka {
+  background: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+table,
+td,
+th {
+  border: 2px solid #69293A;
+  padding: 7px;
+  border-collapse: collapse;
+}
+
+#r {
+  background: red;
+  height: 15px;
+}
+
+#g {
+  background: green;
+  height: 15px
+}
+
+#b {
+  background: blue;
+  height: 15px;
+}
+
+ul {
+  list-style-type: square;
+}
